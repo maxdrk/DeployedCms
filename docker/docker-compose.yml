@@ -9,7 +9,7 @@ services:
     container_name: cms_apache
     restart: unless-stopped
     volumes:
-      - /cms:/var/www 
+      - /opt/cms-app:/var/www/cms 
   proxy-manager:
     image: jlesage/nginx-proxy-manager:v26.05.1
     container_name: nginx_proxy_manager
