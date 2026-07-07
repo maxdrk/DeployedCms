@@ -18,7 +18,7 @@ Le déploiement s'articule autour d'un dossier partagé et de deux conteneurs Do
 
 ## 📦 1. La Configuration Docker
 
-### Le Dockerfile (`./cms/Dockerfile`)
+### Le Dockerfile (`./DeployedCms/Dockerfile`)
 Il construit l'image personnalisée pour le CMS à partir d'une base Ubuntu Apache.
 * Installe les utilitaires de base (`less`, `nano`).
 * Prépare le dossier `/var/www/cms` pour recevoir le code source.

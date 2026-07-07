@@ -3,7 +3,7 @@ version: '3.8'
 services:
   my-cms:
     build:
-      context: ./cms 
+      context: ./DeployedCms 
       dockerfile: Dockerfile
     
     container_name: cms_apache
