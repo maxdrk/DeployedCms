@@ -3,4 +3,4 @@ onbuild run apt udpate && apt upgrade
 run apt install less nano 
 run mkdir /var/www/cms
 volume /cms /var/www/cms 
-expose 3000:80
+expose 3000:3000

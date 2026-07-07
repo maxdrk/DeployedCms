@@ -22,7 +22,7 @@ Le déploiement s'articule autour d'un dossier partagé et de deux conteneurs Do
 Il construit l'image personnalisée pour le CMS à partir d'une base Ubuntu Apache.
 * Installe les utilitaires de base (`less`, `nano`).
 * Prépare le dossier `/var/www/cms` pour recevoir le code source.
-* Expose le port interne `80`.
+* Expose le port interne `3000`.
 
 ### Le Docker Compose (`./docker-compose.yml`)
 Il orchestre les deux services sans avoir besoin de spécifier de version de syntaxe (norme moderne) :
