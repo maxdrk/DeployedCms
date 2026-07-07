@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  my-cms:
+    build:
+      context: ./cms 
+      dockerfile: Dockerfile
+    
+    container_name: cms_apache
+    restart: unless-stopped
+    volumes:
+      - /cms:/var/www 
+  proxy-manager:
+    image: jlesage/nginx-proxy-manager:v26.05.1
+    container_name: nginx_proxy_manager
+    restart: unless-stopped
+    ports:
+      - "80:8080"   
+      - "443:4443"  
+      - "81:8181"   
+    volumes:
+      - ./npm/config:/config

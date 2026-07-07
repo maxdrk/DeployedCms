@@ -1,0 +1,4 @@
+---
+
+- name: Lancement de la copie
+  import_playbook: cms.yml

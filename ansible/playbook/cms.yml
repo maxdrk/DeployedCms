@@ -1,0 +1,13 @@
+- name: "Déploiement du cms sur le serveur distant"
+  hosts: apache2
+  become: yes 
+
+  tasks: 
+   - name: Copie du dossier cms
+     copy:
+  
+       src: "/mnt/sharedFolders/Documents/cms/cmsSimple/"
+       dest: "/opt/cms-app"
+       owner: "www-data"
+       group: "www-data"
+       mode: '0775'
