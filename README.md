@@ -4,12 +4,14 @@ Ce projet automatise le déploiement d'un CMS (Portfolio) sur un serveur distant
 
 L'orchestration et la copie des fichiers sont gérées par **Ansible** depuis une **VM de contrôle sous Debian**. L'infrastructure applicative est quant à elle conteneurisée avec **Docker Compose** (Serveur Web Apache et Reverse Proxy).
 
+
 ---
 
 ## 🏗️ Architecture et Environnement de Travail
 
 Le déploiement s'articule autour d'un dossier partagé et de deux conteneurs Docker isolés :
 
+* **VM Linux ou wsl** : Ansible s'installe avec pipx que j'ai personnellement téléchargé sur ma vm Debian. 
 * **Dossier Partagé (`sharedFolders`)** : Le code source du CMS et les fichiers de configuration Ansible sont stockés dans un dossier partagé (`/mnt/sharedFolders/...`) accessible directement depuis la VM Debian de contrôle.
 * **CMS (Apache2)** : Conteneur personnalisé qui récupère le code du portfolio et l'exécute.
 * **Nginx Proxy Manager (NPM)** : Gère les certificats SSL (HTTPS) et redirige le trafic public de manière sécurisée vers le CMS.
